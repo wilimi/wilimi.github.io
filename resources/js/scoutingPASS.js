@@ -874,7 +874,7 @@ function getData(useStr) {
     if (radio > -1) {
       if (e.checked) {
         if (start == false) {
-          str = str + ';'
+          str = str + '\n'
         } else {
           start = false
         }
@@ -889,20 +889,20 @@ function getData(useStr) {
       }
     } else {
       if (start == false) {
-        str = str + ';'
+        str = str + '\n'
       } else {
         start = false
       }
       if (e.value == "on") {
         if (e.checked) {
           if (useStr) {
-            str = str + code + '=' + checkedChar
+            str = str + code + " (" + name + ")" + '=' + checkedChar
           } else {
             fd.append(name, checkedChar)
           }
         } else {
           if (useStr) {
-            str = str + code + '=' + uncheckedChar
+            str = str + code + " (" + name + ")" + '=' + uncheckedChar
           } else {
             fd.append(name, uncheckedChar)
           }
@@ -913,7 +913,7 @@ function getData(useStr) {
 	}
 	let val = e.value.split(';').join('-').replace(/"/g,'')
         if (useStr) {
-          str = str + code + '(' + name + ')' + '=' + val
+          str = str + code + " (" + name + ")" + '=' + val
         } else {
           fd.append(name, val)
         }
