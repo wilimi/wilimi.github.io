@@ -870,19 +870,18 @@ function getData(useStr) {
   for (e of inputs) {
     code = e.id.substring(6)
     name = e.name
-    
     radio = code.indexOf("_")
     if (radio > -1) {
       if (e.checked) {
         if (start == false) {
-          str = str + "\n"
+          str = str + ';'
         } else {
           start = false
         }
         // str=str+code.substr(0,radio)+'='+code.substr(radio+1)
         // document.getElementById("display_"+code.substr(0, radio)).value = code.substr(radio+1)
         if (useStr) {
-          str = str + code.substr(0, radio) + " (" + e.name + ")" + '=' + e.value
+          str = str + code.substr(0, radio) + " (" + e.id + ")" + '=' + e.value
         } else {
           fd.append(name, '' + e.value)
         }
@@ -897,13 +896,13 @@ function getData(useStr) {
       if (e.value == "on") {
         if (e.checked) {
           if (useStr) {
-            str = str + code + " (" + name + ")" + '=' + checkedChar
+            str = str + code + " (" + e.id + ")" + '=' + checkedChar
           } else {
             fd.append(name, checkedChar)
           }
         } else {
           if (useStr) {
-            str = str + code + " (" + name + ")" + '=' + uncheckedChar
+            str = str + code + " (" + e.id + ")" + '=' + uncheckedChar
           } else {
             fd.append(name, uncheckedChar)
           }
@@ -914,7 +913,7 @@ function getData(useStr) {
 	}
 	let val = e.value.split(';').join('-').replace(/"/g,'')
         if (useStr) {
-          str = str + code + " (" + name + ")" + '=' + val
+          str = str + code + " (" + e.id + ")" + '=' + val
         } else {
           fd.append(name, val)
         }
