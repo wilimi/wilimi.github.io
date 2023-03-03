@@ -890,7 +890,7 @@ function getData(useStr) {
       }
     } else {
       if (start == false) {
-        str = str + '\n'
+        str = str + ';'
       } else {
         start = false
       }
