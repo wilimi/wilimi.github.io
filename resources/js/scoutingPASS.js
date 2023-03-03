@@ -913,7 +913,7 @@ function getData(useStr) {
 	}
 	let val = e.value.split(';').join('-').replace(/"/g,'')
         if (useStr) {
-          str = str + code + '=' + val
+          str = str + code + '(' + name + ')' + '=' + val
         } else {
           fd.append(name, val)
         }
