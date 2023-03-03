@@ -859,6 +859,7 @@ function getData(useStr) {
   var start = true
   var checkedChar = 'Y'
   var uncheckedChar = 'N'
+  var readableName
   if (checkboxAs == 'TF') {
     checkedChar = 'T';
     uncheckedChar = 'F';
@@ -871,6 +872,13 @@ function getData(useStr) {
     code = e.id.substring(6)
     name = e.name
     radio = code.indexOf("_")
+	
+    switch (code) {
+	    case "s":
+		    readableName = "Scouter"
+		    break;
+    }
+	  
     if (radio > -1) {
       if (e.checked) {
         if (start == false) {
@@ -881,7 +889,7 @@ function getData(useStr) {
         // str=str+code.substr(0,radio)+'='+code.substr(radio+1)
         // document.getElementById("display_"+code.substr(0, radio)).value = code.substr(radio+1)
         if (useStr) {
-          str = str + code.substr(0, radio) + " (" + e.id + ")" + '=' + e.value
+          str = str + code.substr(0, radio) + "(" + readableName + ")" + '=' + e.value
         } else {
           fd.append(name, '' + e.value)
         }
@@ -896,13 +904,13 @@ function getData(useStr) {
       if (e.value == "on") {
         if (e.checked) {
           if (useStr) {
-            str = str + code + " (" + e.id + ")" + '=' + checkedChar
+            str = str + code + "(" + readableName + ")" + '=' + checkedChar
           } else {
             fd.append(name, checkedChar)
           }
         } else {
           if (useStr) {
-            str = str + code + " (" + e.id + ")" + '=' + uncheckedChar
+            str = str + code + "(" + readableName + ")" + '=' + uncheckedChar
           } else {
             fd.append(name, uncheckedChar)
           }
