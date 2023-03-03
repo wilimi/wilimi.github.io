@@ -55,7 +55,7 @@ var config_data = `
       "min": 1,
       "max": 99999
     },
-    { "name": "Auto Start Position (take a screenshot of this to the desktop in a folder with the match number and label it the team number!)",
+    { "name": "Auto Start Position (take a screenshot of this to the desktop in a folder with the match number and label it the team number or just a Google Doc with results!)",
       "code": "as",
       "type": "clickable_image",
       "filename": "2023/field_image.png",
