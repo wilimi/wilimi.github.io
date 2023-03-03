@@ -877,6 +877,102 @@ function getData(useStr) {
 	    case "s":
 		    readableName = "Scouter"
 		    break;
+	    case "e":
+		    readableName = "Event"
+		    break;
+	    case "l":
+		    readableName = "Match Level"
+		    break;
+	    case "m":
+		    readableName = "Match Number"
+		    break;
+	    case "r":
+		    readableName = "Robot"
+		    break;
+	    case "t":
+		    readableName = "Team Number"
+		    break;
+	    case "as":
+		    readableName = "Auto Start Position"
+		    break;
+	    case "asg":
+		    readableName = "Auto Scoring"
+		    break;
+	    case "acc":
+		    readableName = "Crossed Cable"
+		    break;
+	    case "acs":
+		    readableName = "Crossed Charging Station"
+		    break;
+	    case "am":
+		    readableName = "Mobility"
+		    break;
+	    case "ad":
+		    readableName = "Docked"
+		    break;
+	    case "tct":
+		    readableName = "Cycle Timer"
+		    break;
+	    case "tsg":
+		    readableName = "Grid Scoring"
+		    break;
+	    case "tfc":
+		    readableName = "Feeder Count"
+		    break;
+	    case "wf":
+		    readableName = "Was Fed"
+		    break;
+	    case "wd":
+		    readableName = "Was Defended"
+		    break;
+	    case "who":
+		    readableName = "Who Defended"
+		    break;
+	    case "lnk":
+		    readableName = "Smart Placement"
+		    break;
+	    case "fpu":
+		    readableName = "Floor Pickup"
+		    break;
+	    case "dt":
+		    readableName = "Docking Timer"
+		    break;
+	    case "fs":
+		    readableName = "Final Status"
+		    break;
+	    case "dn":
+		    readableName = "Total number of alliance robots docked/engaged"
+		    break;
+	    case "ds":
+		    readableName = "Driver Skill"
+		    break;
+	    case "ls":
+		    readableName = "Links Scored"
+		    break;
+	    case "dr":
+		    readableName = "Defense Rating"
+		    break;
+	    case "sd":
+		    readableName = "Swerve drive?"
+		    break;
+	    case "sr":
+		    readableName = "Speed Rating"
+		    break;
+	    case "die":
+		    readableName = "Died/Immobilized"
+		    break;
+	    case "tip":
+		    readableName = "Tippy"
+		    break;
+	    case "dc":
+		    readableName = "Dropped more than 2 cones?"
+		    break;
+	    case "all":
+		    readableName = "Make good alliance partner?"
+		    break;
+	    case "co":
+		    readableName = "Comments"
+		    break;
     }
 	  
     if (radio > -1) {
