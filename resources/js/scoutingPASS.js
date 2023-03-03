@@ -870,11 +870,12 @@ function getData(useStr) {
   for (e of inputs) {
     code = e.id.substring(6)
     name = e.name
+    
     radio = code.indexOf("_")
     if (radio > -1) {
       if (e.checked) {
         if (start == false) {
-          str = str + '\n'
+          str = str + "\n"
         } else {
           start = false
         }
