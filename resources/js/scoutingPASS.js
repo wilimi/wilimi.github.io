@@ -882,7 +882,7 @@ function getData(useStr) {
         // str=str+code.substr(0,radio)+'='+code.substr(radio+1)
         // document.getElementById("display_"+code.substr(0, radio)).value = code.substr(radio+1)
         if (useStr) {
-          str = str + code.substr(0, radio) + '=' + e.value
+          str = str + code.substr(0, radio) + " (" + e.name + ")" + '=' + e.value
         } else {
           fd.append(name, '' + e.value)
         }
